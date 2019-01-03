@@ -19,5 +19,7 @@ module.exports = function(parent, methods) {
   klass.prototype = new bridge();
   assign(klass.prototype, methods);
 
+  klass.prototype.constructor = klass;
+
   return klass;
 };
